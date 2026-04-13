@@ -10,19 +10,24 @@ import (
 )
 
 type FiberApp struct {
-	config fiber.Config
-	app    *fiber.App
+	config       fiber.Config
+	listenConfig fiber.ListenConfig
+	app          *fiber.App
 }
 
-func NewFiberApp(config fiber.Config) *FiberApp {
+func NewFiberApp(
+	config fiber.Config,
+	listenConfig fiber.ListenConfig,
+) *FiberApp {
 	return &FiberApp{
-		config: config,
-		app:    fiber.New(config),
+		config:       config,
+		listenConfig: listenConfig,
+		app:          fiber.New(config),
 	}
 }
 
 func (f *FiberApp) Start(ctx context.Context, port int) error {
-	if err := f.app.Listen(fmt.Sprintf(":%d", port)); err != nil {
+	if err := f.app.Listen(fmt.Sprintf(":%d", port), f.listenConfig); err != nil {
 		return xerrors.Errorf("cannot listen port (%s)", port)
 	}
 
