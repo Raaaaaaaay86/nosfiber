@@ -28,7 +28,7 @@ func NewFiberApp(
 
 func (f *FiberApp) Start(ctx context.Context, port int) error {
 	if err := f.app.Listen(fmt.Sprintf(":%d", port), f.listenConfig); err != nil {
-		return xerrors.Errorf("cannot listen port (%s)", port)
+		return xerrors.Errorf("cannot listen port (%d)", port)
 	}
 
 	return nil
