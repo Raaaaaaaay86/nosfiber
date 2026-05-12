@@ -1,8 +1,14 @@
-# nosfiber
+<h1 align="center"> nosfiber </h1>
 
-`nosfiber` wraps [Fiber v3](https://github.com/gofiber/fiber) to make HTTP server startup, async launch, and graceful shutdown more expressive within the nos ecosystem.
+<p>
+nosfiber wraps <a href="https://github.com/gofiber/fiber">Fiber v3</a> to make HTTP server startup, async launch, and graceful shutdown more expressive within the nos ecosystem.
+</p>
 
-## Installation
+<p align="center">
+  <a href="README.zh-TW.md">中文</a>
+</p>
+
+## Install
 
 ```bash
 go get github.com/raaaaaaaay86/nosfiber

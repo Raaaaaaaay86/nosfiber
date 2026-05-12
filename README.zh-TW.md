@@ -1,6 +1,12 @@
-# nosfiber
+<h1 align="center"> nosfiber </h1>
 
-`nosfiber` 封裝了 [Fiber v3](https://github.com/gofiber/fiber)，讓 HTTP server 的啟動、非同步啟動與優雅關機在 nos 生態系中更加直觀易用。
+<p>
+nosfiber 封裝了 <a href="https://github.com/gofiber/fiber">Fiber v3</a>，讓 HTTP server 的啟動、非同步啟動與優雅關機在 nos 生態系中更加直觀易用。
+</p>
+
+<p align="center">
+  <a href="README.md">English</a>
+</p>
 
 ## 安裝
 
